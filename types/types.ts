@@ -9,4 +9,4 @@ export interface IBook {
 
 export interface BooksResponse {
     data: IBook[];
-  }
+}

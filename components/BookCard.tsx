@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from '@/styles/bookcard.module.scss';
 import { useState } from 'react';
 import useWishlist from '@/hooks/useWishlist';
+import Link from 'next/link';
 
 interface BookCardProps {
     book: IBook,
@@ -28,14 +29,16 @@ const BookCard = ({
 
     return (
         <div className={styles.card}>
-            <Image
-                src={imgSource}
-                width={150}
-                height={200}
-                alt={`book-${book.title}`}
-                style={{ borderRadius: 10 }}
-                onError={handleErrorImg}
-            />
+            <Link href={`/details/${book.id}`}>
+                <Image
+                    src={imgSource}
+                    width={150}
+                    height={200}
+                    alt={`book-${book.title}`}
+                    style={{ borderRadius: 10 }}
+                    onError={handleErrorImg}
+                />
+            </Link>
             <div className={styles.body}>
                 <div className={newBookLabel ? "flex justify-between" : "flex justify-end"}>
                     {newBookLabel && <span className={styles.label}>NEW!</span>}
@@ -47,10 +50,10 @@ const BookCard = ({
 
                     </button>
                 </div>
-                <div className={styles.desc}>
+                <Link href={`/details/${book.id}`} className={styles.desc}>
                     <h1 className={styles.title}>{book.title}</h1>
                     <h5 className={styles.author}>{book.author}</h5>
-                </div>
+                </Link>
             </div>
 
         </div>

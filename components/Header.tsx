@@ -17,11 +17,11 @@ const Header = () => {
                         <span className={styles.redAccent}>SPACE</span>
                     </h1>
                 </Link>
-                <div>
+                {/* <div>
                     <div className={styles.wishlistBtn}>
                         <HeartIcon style={{ width: 30, height: 30 }} />
                     </div>
-                </div>
+                </div> */}
             </nav>
         </div>
     )

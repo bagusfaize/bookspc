@@ -1,5 +1,5 @@
-import { getAllBooks } from "@/services/books"
-import { BooksResponse } from "@/types/types"
+import { getAllBooks, getBookById } from "@/services/books"
+import { BooksResponse, IBook } from "@/types/types"
 import { useQuery } from "@tanstack/react-query"
 
 export const useBooks = () => {
@@ -7,5 +7,14 @@ export const useBooks = () => {
         queryKey: ['books'],
         queryFn: getAllBooks,
         initialData: { data: [] }
-      })
+    })
+}
+
+export const useBookById = (id: number) => {
+    return useQuery({
+        queryKey: ['book', id],
+        queryFn: () => getBookById(id),
+        enabled: !!id,
+        initialData: {}
+    })
 }

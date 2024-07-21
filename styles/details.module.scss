@@ -1,0 +1,59 @@
+@import './variables.scss';
+
+.backNav {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    margin: 20px;
+}
+
+.details {
+    margin: 0 20px;
+}
+
+.field {
+    margin-bottom: 50px;
+}
+
+.bookTitle {
+    font-size: 19px;
+}
+
+.author {
+    font-size: 14px;
+    color: #464646;
+}
+
+// .tags {
+//     margin: 10px 0;
+//     font-size: 12px;
+// }
+
+.tagItem {
+    border-radius: 15px;
+    padding: 3px 10px;
+    border: 1px solid $primary-color;
+}
+
+.title {
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.desc {
+    font-size: 14px;
+}
