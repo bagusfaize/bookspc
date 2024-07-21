@@ -1,0 +1,52 @@
+@import './layout.module.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 20px;
+    margin: 0;
+}
+
+.blackAccent {
+    font-weight: 400 !important;
+    color: #000;
+}
+
+.redAccent {
+    color: #e74c3c;
+}
+
+.wishlistBtn {
+    font-size: 11px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.counter {
+    border-radius: 50%;
+    position: absolute;
+    bottom: 7px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    background-color: #e74c3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

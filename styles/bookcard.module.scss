@@ -1,0 +1,52 @@
+.card {
+    max-width: 150px;
+    padding: 1rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 16px 24px rgba(3, 7, 18, 0.08);
+}
+
+.body {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.desc {
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.author {
+    font-weight: 400;
+    margin: 0;
+    color: #3e3e3e;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    padding: 0 5px;
+    font-size: 11px;
+    border-radius: 5px
+}
+
+.wishlist {
+    background: none;
+    border: none;
+    color: red;
+}

@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Montserrat, Poppins } from "next/font/google";
+import '@/styles/globals.scss'
+import Header from "@/components/Header";
+import ReactQueryProvider from "@/providers/ReactQueryProvider";
+import HomeLayout from "@/layouts/HomeLayout";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ weight: ["200","400","500", "600", "700", "800"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>
+        <ReactQueryProvider>
+          <HomeLayout>
+            {children}
+          </HomeLayout>
+        </ReactQueryProvider>
+      </body>
     </html>
   );
 }
