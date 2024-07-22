@@ -2,7 +2,7 @@
 
 ![image](https://github.com/user-attachments/assets/4efaddb5-3973-432e-928b-93aa17d0e48d)
 
-![image](https://github.com/user-attachments/assets/5e364e21-542f-474d-b3cb-e337fa95f095)
+![image](https://github.com/user-attachments/assets/7e7cf640-6bba-468b-a521-1b6bd9bebe15)
 
 
 ## Bookspace
