@@ -9,7 +9,7 @@
 .sidebar {
     display: flex;
     flex-direction: column;
-    width: 175px;
+    width: 155px;
     border-radius: 10px;
     background-color: white;
     color: black;
@@ -55,7 +55,7 @@
 .content {
     flex-grow: 1;
     overflow-y: auto;
-    padding: 20px;
+    padding: 10px 50px;
 }
 
 
