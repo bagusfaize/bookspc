@@ -32,6 +32,14 @@ const Modal = ({ isOpen, onSubmit, onClose }: ModalProps) => {
         reset();
     };
 
+    const validateUrl = (value: string) => {
+        const urlPattern = /^(https?|chrome):\/\/[^\s$.?#].[^\s]*$/;
+        if (!urlPattern.test(value)) {
+          return 'Invalid URL format';
+        }
+        return true;
+      };
+
     return (
         <ReactModal
             open={isOpen}
@@ -49,9 +57,9 @@ const Modal = ({ isOpen, onSubmit, onClose }: ModalProps) => {
                     {errors.title && <span className={styles.errorMessage}>This field is required</span>}
                 </div>
                 <div className={styles.formGroup}>
-                    <label className={styles.label} htmlFor="cover">Cover</label>
-                    <input className={styles.input} id="cover" {...register('cover', { required: true })} />
-                    {errors.cover && <span className={styles.errorMessage}>This field is required</span>}
+                    <label className={styles.label} htmlFor="cover">Cover URL</label>
+                    <input className={styles.input} type='url' id="cover" {...register('cover', { required: true, validate: validateUrl })} />
+                    {errors.cover && <span className={styles.errorMessage}>{errors.cover.message || 'This field is required'}</span>}
                 </div>
                 <div className={styles.formGroup}>
                     <label className={styles.label} htmlFor="author">Author</label>
