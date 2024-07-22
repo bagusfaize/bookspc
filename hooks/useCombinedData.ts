@@ -22,9 +22,6 @@ const useCombinedBooks = ({
       setCombinedBooks(combinedBooks);
     }
   }, [fetchedBooks, localBooks, isFetched])
-  
-
-  // console.log('clg localBooks', localBooks);
 
   const totalPages = Math.ceil(combinedBooks.length / itemsPerPage);
 
