@@ -1,12 +1,15 @@
 import { IBook } from "@/types/types";
 import BookCard from "./BookCard"
 import Title from "./Title";
+import { BookCardSkeleton } from "./Skeletons";
 
 interface BookListProps {
-    books: IBook[]
+    books: IBook[],
+    isLoading: boolean
 }
 
-const BookList = ({ books }: BookListProps) => {
+const BookList = ({ books, isLoading }: BookListProps) => {
+
     return (
         <>
             <Title text="All Books" />
@@ -18,8 +21,19 @@ const BookList = ({ books }: BookListProps) => {
                     />
                 ))}
             </div>
+            {isLoading && <LoadingSkeleton />}
         </>
     )
 }
 
 export default BookList;
+
+const LoadingSkeleton = () => {
+    return (
+        <div className="flex justify-between">
+            {Array.from({ length: 5 }).map((_, index) => (
+                <BookCardSkeleton key={index} />
+            ))}
+        </div>
+    )
+}

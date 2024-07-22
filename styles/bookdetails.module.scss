@@ -10,13 +10,40 @@
 
 .section {
     background-color: #fff;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
+    margin-bottom: 50px;
 }
 
 .content {
     display: flex;
-    margin: 20px;
+    margin: 20px 20px 50px 20px;
+}
+
+.reviewSection {
+    // padding-top: 20px;
+    margin: 20px 20px 50px 20px;
+}
+
+.reviewItem {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    display: flex;
+    gap: 5px;
+}
+
+.reviewerName {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.reviewerDesc {
+    font-size: 14px;
+    color: #464646;
 }
 
 .details {
@@ -36,10 +63,10 @@
     color: #464646;
 }
 
-// .tags {
-//     margin: 10px 0;
-//     font-size: 12px;
-// }
+.rating {
+    margin: 5px 0;
+    font-size: 12px;
+}
 
 .tagItem {
     border-radius: 15px;

@@ -8,7 +8,7 @@ import { useBooks } from "@/hooks/useBooks";
 
 export default function Home() {
 
-  const { data } = useBooks()
+  const { data, isFetched } = useBooks()
 
   const {
     currentItems,
@@ -19,7 +19,10 @@ export default function Home() {
 
   return (
     <main className={styles.container}>
-      <BookList books={currentItems} />
+      <BookList 
+        books={currentItems}
+        isLoading={!isFetched}
+      />
       <Pagination
         currentPage={currentPage}
         onPrev={handlePrevPage}

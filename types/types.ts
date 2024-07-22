@@ -10,3 +10,10 @@ export interface IBook {
 export interface BooksResponse {
     data: IBook[];
 }
+
+export interface IReview {
+    id: string,
+    name: string,
+    rating: number,
+    review: string,
+}
