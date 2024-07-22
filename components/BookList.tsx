@@ -13,7 +13,7 @@ const BookList = ({ books, isLoading }: BookListProps) => {
     return (
         <>
             <Title text="All Books" />
-            <div className="flex justify-start gap-md">
+            <div className="flex justify-start gap-md overflow-auto">
                 {books.map(book => (
                     <BookCard
                         key={book.id}
@@ -28,7 +28,7 @@ const BookList = ({ books, isLoading }: BookListProps) => {
 
 const LoadingSkeleton = () => {
     return (
-        <div className="flex justify-start gap-md">
+        <div className="flex justify-start gap-md overflow-auto">
             {Array.from({ length: 5 }).map((_, index) => (
                 <BookCardSkeleton key={index} />
             ))}
