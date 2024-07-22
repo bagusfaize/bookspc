@@ -10,11 +10,11 @@ export const useBooks = () => {
     })
 }
 
-export const useBookById = (id: number) => {
+export const useBookById = (id: number, enabledFetch: boolean) => {
     return useQuery({
         queryKey: ['book', id],
         queryFn: () => getBookById(id),
-        enabled: !!id,
+        enabled: enabledFetch,
         initialData: {}
     })
 }

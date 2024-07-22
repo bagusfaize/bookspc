@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import styles from "@/styles/layout.module.scss";
 
 const HomeLayout = ({
   children,
@@ -6,7 +7,7 @@ const HomeLayout = ({
   children: React.ReactNode
 }) => {
   return (
-    <section>
+    <section className={styles.container}>
       <Header />
       {children}
     </section>

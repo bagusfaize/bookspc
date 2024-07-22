@@ -13,7 +13,7 @@ const BookList = ({ books, isLoading }: BookListProps) => {
     return (
         <>
             <Title text="All Books" />
-            <div className="flex justify-between">
+            <div className="flex justify-start gap-md">
                 {books.map(book => (
                     <BookCard
                         key={book.id}
@@ -26,14 +26,14 @@ const BookList = ({ books, isLoading }: BookListProps) => {
     )
 }
 
-export default BookList;
-
 const LoadingSkeleton = () => {
     return (
-        <div className="flex justify-between">
+        <div className="flex justify-start gap-md">
             {Array.from({ length: 5 }).map((_, index) => (
                 <BookCardSkeleton key={index} />
             ))}
         </div>
     )
 }
+
+export default BookList;

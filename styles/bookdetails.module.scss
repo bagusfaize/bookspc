@@ -47,6 +47,7 @@
 }
 
 .details {
+    width: 100%;
     margin: 0 20px;
 }
 
@@ -54,8 +55,16 @@
     margin-bottom: 50px;
 }
 
+.titleWishlist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .bookTitle {
     font-size: 19px;
+    font-weight: 600;
+    margin: 0;
 }
 
 .author {
@@ -83,4 +92,16 @@
 
 .desc {
     font-size: 14px;
+}
+
+.wishlistButton {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid rgb(158, 158, 158);
+    background-color: white;
+    cursor: pointer;
 }

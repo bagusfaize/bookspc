@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
 import '@/styles/globals.scss'
-import Header from "@/components/Header";
 import ReactQueryProvider from "@/providers/ReactQueryProvider";
 import HomeLayout from "@/layouts/HomeLayout";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({ weight: ["200","400","500", "600", "700", "800"], subsets: ["latin"] });
 
@@ -22,6 +22,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <ReactQueryProvider>
           <HomeLayout>
+            <Toaster position="bottom-center" />
             {children}
           </HomeLayout>
         </ReactQueryProvider>

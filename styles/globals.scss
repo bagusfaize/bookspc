@@ -2,5 +2,13 @@
 @import './layout.module.scss';
 
 body {
+    margin: 0;
+    padding: 0;
     background-color: $background-color;
+}
+
+input,
+textarea,
+button {
+    font-family: inherit
 }

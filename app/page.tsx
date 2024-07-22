@@ -1,24 +1,25 @@
 'use client'
 
-import styles from "@/styles/layout.module.scss";
 import BookList from "@/components/BookList";
 import Pagination from "@/components/Pagination";
-import usePagination from "@/hooks/usePagination";
-import { useBooks } from "@/hooks/useBooks";
+import useCombinedData from "@/hooks/useCombinedData";
+import { useBooks } from "@/hooks/useBooksQuery";
+import useBookStore from "@/store/useBookStore";
 
 export default function Home() {
 
-  const { data, isFetched } = useBooks()
+  const { data, isFetched } = useBooks();
+  const { books: localBooks } = useBookStore();
 
   const {
     currentItems,
     currentPage,
     handleNextPage,
     handlePrevPage
-  } = usePagination({ items: data.data })
+  } = useCombinedData({ fetchedBooks: data.data, localBooks, isFetched })
 
   return (
-    <main className={styles.container}>
+    <main>
       <BookList 
         books={currentItems}
         isLoading={!isFetched}

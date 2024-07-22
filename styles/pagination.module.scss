@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .pagination{
     margin: 20px 0;
     display: flex;
@@ -12,4 +14,10 @@
     border: none;
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        border: 1px solid $primary-color;
+        background-color: darken(white, 5%);
+      }
 }

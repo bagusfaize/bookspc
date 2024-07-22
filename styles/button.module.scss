@@ -1,0 +1,38 @@
+@import './variables.scss';
+
+.button {
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: background-color 0.3s ease;
+}
+
+.primary {
+  background-color: $primary-color;
+  color: white;
+
+  &:hover {
+    background-color: darken($primary-color, 20%);
+  }
+}
+
+.secondary {
+  background-color: #e4e4e4;
+  color: black;
+  border: 1px solid darken(#e4e4e4, 15%);
+
+  &:hover {
+    background-color: darken(#e4e4e4, 10%);
+  }
+}
+
+.small {
+  padding: 7px 15px;
+  font-size: 13px;
+}
+
+.normal {
+  padding: 8px 18px;
+  font-size: 15px;
+}
